@@ -39,6 +39,15 @@
   <div style="text-align: center; margin-top: 2rem;">
   <img src="bobs.png" alt="Logo" style="max-width: 180px; opacity: 0.9;" />
 </div>
-
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("service-worker.js").then(
+        () => console.log("✅ Service Worker registered"),
+        err => console.log("❌ Service Worker registration failed:", err)
+      );
+    });
+  }
+</script>
 </body>
 </html>
