@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trinkgeld Rechner</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <script defer src="script.js"></script>
+
+  <!-- iOS Home Screen Support -->
+  <link rel="apple-touch-icon" href="icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+</head>
+<body>
+  <div class="container">
+    <h1>Trinkgeld Rechner</h1>
+
+    <label for="total">Gesamtes Trinkgeld (€)</label>
+    <input type="number" id="total" placeholder="z.B. 100" />
+
+    <div class="section">
+      <h2>Service 👤</h2>
+      <div id="service-list"></div>
+      <button onclick="addWorker('service')">+ Hinzufügen</button>
+    </div>
+
+    <div class="section">
+      <h2>Küche 🍳</h2>
+      <div id="kitchen-list"></div>
+      <button onclick="addWorker('kitchen')">+ Hinzufügen</button>
+    </div>
+
+    <button id="calc-btn" onclick="calculate()">Berechnen</button>
+
+    <pre id="result"></pre>
+  </div>
+  <div style="text-align: center; margin-top: 2rem;">
+  <img src="bobs.png" alt="Logo" style="max-width: 180px; opacity: 0.9;" />
+</div>
+
+</body>
+</html>
